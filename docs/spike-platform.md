@@ -1,4 +1,4 @@
-# Platform spike (T-R1-05)
+# Platform spike (T-R1-04 and T-PR-02)
 
 The spike tests the assumptions the order write, login and PDF plans depend on, before any
 feature work. The code lives on the branch `spike/platform`, which is never merged: the checks
@@ -6,9 +6,9 @@ are in `src/spike/` and run through `tests/spike/local.test.ts` locally and `/ap
 Vercel preview.
 
 On 2026-11-03 the owner chose to run the app only locally until launch, so the spike runs in two
-halves. The local half is done. The platform half runs with T-R1-04, just before launch.
+halves. The local half (T-R1-04) is done. The platform half (T-PR-02) runs in the pre-release stage, just before launch.
 
-## Local half: done 2026-11-03
+## Local half: T-R1-04, done 2026-11-03
 
 Run on a SQLite file through `@libsql/client` 0.18.0, Node.js 22.23, macOS 26.6 on arm64.
 Command: `npx vitest run tests/spike` on `spike/platform`.
@@ -33,7 +33,7 @@ What this settles for the plan:
 - Argon2id at the library defaults costs about 50 ms per login on this machine.
 - A3 order PDFs render without Chromium. 500 rows is the largest uniform order allowed.
 
-## Platform half: runs with T-R1-04
+## Platform half: T-PR-02, in pre-release
 
 These need a Vercel preview with Turso and Blob, so they wait for the deploy.
 
@@ -43,6 +43,6 @@ These need a Vercel preview with Turso and Blob, so they wait for the deploy.
 | Argon2id and the A3 PDF inside a Vercel function, within 300 s and 2 GB on Hobby | `GET /api/spike/argon2`, `GET /api/spike/pdf`                          |
 | Private Blob upload, download, anonymous refusal and delete                      | `GET /api/spike/blob`                                                  |
 | `after()` runs work after the response is sent                                   | `GET /api/spike/after`, then `GET /api/spike/after-result`             |
-| Vercel Cron calls a route with `CRON_SECRET`                                     | Moved to T-R1-10: Vercel runs cron jobs on production deployments only |
+| Vercel Cron calls a route with `CRON_SECRET`                                     | Moved to T-PR-04: Vercel runs cron jobs on production deployments only |
 
 Every route needs the `x-spike-secret` header equal to `SPIKE_SECRET`, set for Preview only.

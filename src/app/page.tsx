@@ -27,8 +27,8 @@ export default function HomePage() {
         <div className="container py-lg-4">
           <h1 className="display-5 fw-bold">Custom sports uniforms for your team</h1>
           <p className="lead col-lg-8">
-            Pick a product, choose the fabric and options, and add your players. The new i2i site is
-            being rebuilt; ordering opens in a later release.
+            Pick a product, choose the fabric and options, and add your players. This store is being
+            built; ordering opens in a later release.
           </p>
           <a className="btn btn-primary btn-lg" href="#order-types">
             See how to order

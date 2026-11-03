@@ -4,7 +4,8 @@ import { z } from 'zod';
 const unsetIfEmpty = (value: unknown) => (value === '' ? undefined : value);
 
 const envSchema = z.object({
-  DATABASE_URL: z.preprocess(unsetIfEmpty, z.string().default('file:./data/i2i.db')),
+  STORE_NAME: z.preprocess(unsetIfEmpty, z.string().default('Sakaloka Store')),
+  DATABASE_URL: z.preprocess(unsetIfEmpty, z.string().default('file:./data/app.db')),
   DATABASE_AUTH_TOKEN: z.preprocess(unsetIfEmpty, z.string().optional()),
   STORAGE_DRIVER: z.preprocess(unsetIfEmpty, z.enum(['disk', 'blob']).default('disk')),
   STORAGE_DISK_ROOT: z.preprocess(unsetIfEmpty, z.string().default('./data/uploads')),

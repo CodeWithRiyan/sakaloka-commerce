@@ -3,10 +3,10 @@ import { tmpdir } from 'node:os';
 import path from 'node:path';
 import { afterAll, beforeAll, describe, expect, it, vi } from 'vitest';
 
-const dir = mkdtempSync(path.join(tmpdir(), 'i2i-api-'));
+const dir = mkdtempSync(path.join(tmpdir(), 'sakaloka-api-'));
 
 beforeAll(() => {
-  vi.stubEnv('DATABASE_URL', `file:${path.join(dir, 'i2i.db')}`);
+  vi.stubEnv('DATABASE_URL', `file:${path.join(dir, 'app.db')}`);
   vi.stubEnv('STORAGE_DRIVER', 'disk');
 });
 

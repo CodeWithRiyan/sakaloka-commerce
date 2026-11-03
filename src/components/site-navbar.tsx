@@ -23,7 +23,7 @@ export function SiteNavbar() {
     <Navbar expand="lg" bg="white" sticky="top" className="border-bottom">
       <Container>
         <Navbar.Brand as={Link} href="/">
-          <Image src="/brand/logo.png" alt="i2i custom" width={134} height={50} priority />
+          <Image src="/placeholder/logo.svg" alt="i2i" width={134} height={50} priority />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="site-nav" />
         <Navbar.Collapse id="site-nav">

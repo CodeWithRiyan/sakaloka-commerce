@@ -77,11 +77,11 @@ jobs:
       # Scans the checked-out files only. History is not scanned, by the
       # owner's decision of 2026-11-03 (see the rebuild plan).
       - run: gitleaks dir . --no-banner --redact
-      # The repo holds no documents, by the owner's decision of 2026-11-03:
-      # plans, results and release notes live in the rebuild plan doc.
+      # The repo holds no documents except README.md, by the owner's decision of
+      # 2026-11-03: plans, results and release notes live in the rebuild plan doc.
       - name: No documentation files
         run: |
-          docs="$(git ls-files '*.md' '*.mdx' '*.rst')"
+          docs="$(git ls-files '*.md' '*.mdx' '*.rst' | grep -vx 'README.md' || true)"
           if [ -n "$docs" ]; then
             echo "Documentation files are not kept in this repo:"
             echo "$docs"

@@ -1,0 +1,10 @@
+// Brand overrides come before Bootstrap so its components pick them up.
+$primary: #da4d4d;
+$link-decoration: none;
+
+@import 'bootstrap/scss/bootstrap';
+
+.order-type-card img {
+  height: auto;
+  width: 100%;
+}

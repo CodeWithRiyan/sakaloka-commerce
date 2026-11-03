@@ -1,0 +1,37 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+
+# Editors
+.idea/
+.vscode/
+*.swp
+
+# Logs
+*.log
+
+# Dependencies
+node_modules/
+
+# Next.js
+.next/
+out/
+next-env.d.ts
+*.tsbuildinfo
+
+# Local SQLite database and uploads
+data/
+
+# Vercel
+.vercel/
+
+# Tests
+coverage/
+playwright-report/
+test-results/
+blob-report/

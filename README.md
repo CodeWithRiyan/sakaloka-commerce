@@ -1,14 +1,27 @@
 # i2i
 
-Custom sports uniform store: catalog, uniform, mix and stock orders, and an admin.
+i2i (i2icustom) makes custom sports uniforms for teams. Customers order in three ways:
 
-The app is being rebuilt as one Next.js app styled with Bootstrap 5.3, with SQLite for data
-(a local file in development, Turso in production) and Vercel for hosting. The plan lives in
-the "i2i Rebuild: Next.js + SQLite on Vercel" doc.
+- **Uniform order**: one product for the whole team, with a name, number and size per player.
+- **Mix order**: several products in one order, one row per product.
+- **Stock order**: ready-made items by size, from stock.
 
-The old PHP (CodeIgniter 3) app is kept under the Git tag `legacy-final` as a reference:
+An order is a request, not a payment: the site prices it, and sales confirms the artwork, price
+and delivery with the customer.
+
+The old site ran at i2icustom.com on PHP (CodeIgniter 3) and is no longer online. This repo
+is its rebuild: one Next.js app styled with Bootstrap 5.3, with data in SQLite. The old app is
+kept under the Git tag `legacy-final`.
+
+## Run it locally
+
+Needs Node.js 22 (see `.nvmrc`).
 
 ```sh
-git show legacy-final:i2i.sql
-git worktree add ../i2i-legacy legacy-final
+npm ci
+npm run db:migrate
+npm run dev
 ```
+
+The app opens at http://localhost:3000, with its database in `./data/i2i.db`. Copy
+`.env.example` to `.env.local` to change any setting.

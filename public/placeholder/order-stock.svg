@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 731 452" width="731" height="452" role="img" aria-label="Stock order">
+  <!-- Placeholder drawn for this repo. The client's banners are loaded only after written permission (T-PR-06). -->
+  <rect width="731" height="452" fill="#2b2f33"/>
+  <path d="M0 0H190L60 452H0Z" fill="#da4d4d" opacity="0.9"/>
+  <path d="M731 452H560L690 0H731Z" fill="#da4d4d" opacity="0.6"/>
+  <g transform="translate(365 200)" fill="none" stroke="#ffffff" stroke-width="6" stroke-linejoin="round">
+    <g transform="translate(0 0) scale(0.9)">
+      <path d="M-45 -110 L-110 -80 L-140 -20 L-100 0 L-85 -30 L-85 110 L85 110 L85 -30 L100 0 L140 -20 L110 -80 L45 -110 Q0 -80 -45 -110 Z"/>
+    </g>
+    <rect x="-170" y="40" width="340" height="70" rx="6"/>
+  </g>
+  <text x="365" y="400" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="40" font-weight="800" fill="#ffffff" letter-spacing="2">STOCK ORDER</text>
+</svg>

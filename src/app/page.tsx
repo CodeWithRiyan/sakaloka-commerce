@@ -1,19 +1,20 @@
 import Image from 'next/image';
 
-// The three ways to order, built in R3. The images come from the old site.
+// The three ways to order, built in R3. The images are placeholders drawn for this repo;
+// the client's banners are loaded only after written permission (T-PR-06).
 const orderTypes = [
   {
-    image: '/brand/order_uniform.png',
+    image: '/placeholder/order-uniform.svg',
     title: 'Uniform order',
     text: 'One product for the whole team, with a name, number and size per player.',
   },
   {
-    image: '/brand/order_mix.png',
+    image: '/placeholder/order-mix.svg',
     title: 'Mix order',
     text: 'Several products in one order, one row per product.',
   },
   {
-    image: '/brand/order_stock.png',
+    image: '/placeholder/order-stock.svg',
     title: 'Stock order',
     text: 'Ready-made items by size, straight from stock.',
   },

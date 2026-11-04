@@ -1,17 +1,20 @@
-# i2i
+# Sakaloka Commerce
 
-i2i (i2icustom) makes custom sports uniforms for teams. Customers order in three ways:
+An online store for products that customers put together from options: choose the product,
+its material and options, add a size, name and number per item, and order. It suits teamwear,
+printed apparel and any product sold with variants, quantity price tiers and per-item
+personalisation.
 
-- **Uniform order**: one product for the whole team, with a name, number and size per player.
-- **Mix order**: several products in one order, one row per product.
+Customers order in three ways:
+
+- **Bulk order**: one product for a whole group, with a name, number and size per item.
+- **Mixed order**: several products in one order, one row per product.
 - **Stock order**: ready-made items by size, from stock.
 
-An order is a request, not a payment: the site prices it, and sales confirms the artwork, price
-and delivery with the customer.
+An order is a request, not a payment: the store prices it on the server, and the seller
+confirms the details with the customer.
 
-The old site ran at i2icustom.com on PHP (CodeIgniter 3) and is no longer online. This repo
-is its rebuild: one Next.js app styled with Bootstrap 5.3, with data in SQLite. The old app is
-kept under the Git tag `legacy-final`.
+Built with Next.js, Bootstrap 5.3 and SQLite.
 
 ## Run it locally
 
@@ -23,5 +26,9 @@ npm run db:migrate
 npm run dev
 ```
 
-The app opens at http://localhost:3000, with its database in `./data/i2i.db`. Copy
-`.env.example` to `.env.local` to change any setting.
+The app opens at http://localhost:3000, with its database in `./data/app.db`. Copy
+`.env.example` to `.env.local` to change any setting, such as the store name.
+
+## License
+
+MIT, see `LICENSE`.

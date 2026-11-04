@@ -1,6 +1,5 @@
 'use client';
 
-import Image from 'next/image';
 import Link from 'next/link';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
@@ -18,12 +17,12 @@ const links = [
   { href: '/contact', label: 'Contact' },
 ];
 
-export function SiteNavbar() {
+export function SiteNavbar({ storeName }: Readonly<{ storeName: string }>) {
   return (
     <Navbar expand="lg" bg="white" sticky="top" className="border-bottom">
       <Container>
-        <Navbar.Brand as={Link} href="/">
-          <Image src="/placeholder/logo.svg" alt="i2i" width={134} height={50} priority />
+        <Navbar.Brand as={Link} href="/" className="fw-bold text-primary">
+          {storeName}
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="site-nav" />
         <Navbar.Collapse id="site-nav">

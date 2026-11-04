@@ -2,7 +2,7 @@ import { mkdirSync } from 'node:fs';
 import path from 'node:path';
 import { defineConfig } from 'drizzle-kit';
 
-const url = process.env.DATABASE_URL || 'file:./data/i2i.db';
+const url = process.env.DATABASE_URL || 'file:./data/app.db';
 
 // libSQL creates a local database file but not its folder, as in a fresh clone.
 if (url.startsWith('file:')) {
